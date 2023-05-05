@@ -20,5 +20,4 @@ if __name__ == '__main__':
 
     #show mainwindow or quit
     mainwindow.show()
-    #subwindow.show()
     sys.exit(app.exec_())
