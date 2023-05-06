@@ -20,9 +20,8 @@ if __name__ == '__main__':
     btn.clicked.connect( subwindow.show )#no parentheses() for function
 
     #post ip
-    text = main_ui.textEdit.toPlainText()
     atom = atom()
-    btn.clicked.connect( lambda: atom.get_loc(text) )
+    btn.clicked.connect( lambda: atom.get_loc(main_ui.textEdit.toPlainText()) )
 
     #show mainwindow or quit
     mainwindow.show()

@@ -1,10 +1,11 @@
-#key for api request
-#IP_KEY = "c71abfe217768898585750c10c423aca"
-IP_URL = "http://api.liangmlk.cn"#test ip 192.168.211.228 http://ip.taobao.com/service/getIpInfo2.php
-import requests
+# key for api request
+# IP_KEY = "xbDpKsZJcFgmSyLlAXHo"
 import json
+import requests
+IP_URL = "http://api.liangmlk.cn?ak=xbDpKsZJcFgmSyLlAXHo&appid=602&ip="
 
-class atom (object):
+
+class atom (object):#class for all the info about target location
 
     def __init__(self):
         self.ip = ""
@@ -14,12 +15,11 @@ class atom (object):
         self.isp = ""
         self.weather = ""
 
-    def get_loc(self,ip):
-        self.ip=ip
-        datain = {'data':self.ip}
-        loc_json = requests.post(IP_URL,data=datain)
+    def get_loc(self, ip):#use ip to get the location
+        self.ip = ip
+        post = IP_URL + self.ip
+        loc_json = requests.get(post)
 
-        #loc = json.loads(loc_json)
-        #self.country = loc[country]
-        #print(loc)
-        print(loc_json.text)
+        # loc = json.loads(loc_json)
+        # self.country = loc[country]
+        #print(loc_json.text)
