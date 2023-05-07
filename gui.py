@@ -41,7 +41,7 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "nuclear weapon"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "盒武器"))
         self.label.setText(_translate("MainWindow", "type your target IP here"))
         self.pushButton.setText(_translate("MainWindow", "launch weapon!"))
 
